@@ -1,0 +1,1 @@
+magnitude = @(vec) sqrt(sum(vec.^2));
