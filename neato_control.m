@@ -12,7 +12,7 @@ rainbow_road_center_line = [
 ];
 
 rainbow_road_center_line_vel = [
-    diff(ranbow_road_center_line(1)), ...
+    diff(rainbow_road_center_line(1)), ...
     diff(rainbow_road_center_line(2))
 ];
 
@@ -34,8 +34,8 @@ tangent_vec_3d = [ ...
 ];
 tangent_vec_3d_deriv = diff(tangent_vec_3d);
 
-rainbow_road_axis_of_rotation = cross(tangent_vec_3d, tangent_vec_deriv);
-rainbow_road_angular_velocity(u) = magnitude( ...
+rainbow_road_axis_of_rotation = cross(tangent_vec_3d, tangent_vec_3d_deriv);
+rainbow_road_angular_velocity = magnitude( ...
                                             rainbow_road_axis_of_rotation);
 
 rainbow_road_vel_left = (rainbow_road_center_line_vel - ...
